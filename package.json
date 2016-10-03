@@ -2,7 +2,7 @@
   "name": "phoenix-roofing",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,5 +13,8 @@
     "express": "^4.14.0",
     "express-mailer": "^0.3.1",
     "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.2"
   }
 }
