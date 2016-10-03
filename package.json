@@ -3,16 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "express-mailer": "^0.3.1",
-    "pug": "^2.0.0-beta6",
-    "webpack": "^1.13.2"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6"
   },
   "repository": {
     "type": "git",
@@ -20,6 +16,11 @@
   },
   "author": "",
   "license": "ISC",
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "bugs": {
     "url": "https://github.com/larfoley/phoenixroofing/issues"
   },
