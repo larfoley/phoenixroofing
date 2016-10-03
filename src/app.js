@@ -20,7 +20,7 @@ app.set('views', __dirname + '/views');
 //  transportMethod: 'SMTP',
 //  auth: {
 //    user: 'larf.87@gmail.com',
-//    pass: 'theowlsarenotwhattheyseem'
+//    pass: ''
 //  }
 // });
 
