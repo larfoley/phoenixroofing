@@ -1,0 +1,50 @@
+.button {
+  border: none;
+  border-bottom: 3px solid;
+  border-radius: 5px;
+  text-decoration: none;
+  min-width: 160px;
+  padding: .6em 2.5em;
+  display: inline-block;
+  vertical-align: baseline;
+  transition: .4s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--large {
+    @extend .button;
+    min-width: 250px;
+  }
+
+  &--full {
+    @extend .button;
+    padding: .7em 2.5em;
+    min-width: 100%;
+  }
+
+  @each $color, $value in $colors {
+    &__bg-color-#{$color} {
+      background-color: $value;
+      border-color: darken($value, 25%);
+      &:hover {
+        background-color: darken($value, 10%);
+      }
+    }
+    &__color-#{$color} {
+      color: $value;
+    }
+  }
+
+  &__primary {
+    @extend .button;
+    background: $primary-color;
+    color: white;
+    border-color: darken($primary-color, 25%);
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+}

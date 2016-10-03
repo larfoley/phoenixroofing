@@ -1,0 +1,71 @@
+.main-nav {
+  background: #2e2e2e;
+  @extend .clearfix;
+
+  &__logo, &__link {
+    line-height: 3;
+    @media #{$mq-medium} {
+      line-height: 4;
+    }
+  }
+
+  &__toggle {
+
+    @media #{$mq-medium} {
+      display: none;
+    }
+  }
+
+  &__logo {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__list {
+
+    @media #{$mq-medium} {
+      float: right;
+    }
+  }
+
+  &__item {
+
+    @media #{$mq-medium} {
+      float: left;
+    }
+
+    &:first-child a {
+      // padding-top: 1em;
+      // color: green
+      // margin-top: .5em
+    }
+
+  }
+
+  &__link {
+    display: inline-block;
+    color: white;
+    padding: 0 1em;
+    // text-transform: uppercase;
+    color: #f5f5f5;
+    // font-weight: bold;
+    // font-size: .9em;
+    // background: $primary-color;
+    // border-radius: 5px;
+    text-align: center;
+
+    &:hover {
+      background: $primary-color
+    }
+
+    @media #{$mq-medium} {
+
+    }
+  }
+
+}
+
+.js .main-nav__list.isHidden {
+  display: none;
+}

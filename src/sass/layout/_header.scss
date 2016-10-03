@@ -1,0 +1,12 @@
+.page-header {
+  background: url("/img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+
+  .overlay {
+    padding: 6em;
+    background: rgba(25,25,25, 0.3);
+  }
+}

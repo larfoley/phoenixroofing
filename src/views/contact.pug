@@ -1,0 +1,47 @@
+extends ./layout.pug
+block content
+  header.page-header
+    .overlay
+      h1.big-title.text-center.white Contact
+  main
+    p
+      | #{test}
+    .container
+      .grid
+        .grid__col.grid__col--6-of-12
+          section.page-section
+            form.contact-form(action="/contact", method="POST")
+              h2 Leave a Message
+              p.contact-form__field
+                label Name
+                input(type="text", name="name", id="name")
+              p.contact-form__field
+                label Email
+                input(type="email", name="email", id="email")
+              p.contact-form__field
+                label Message
+                textarea(name="message", id="message")
+              p.contact-form__field
+                //- button.button__primary(type="submit") Submit
+                input(type="submit", value="Submit").button__primary
+        .grid__col.grid__col--4-of-12.grid__col--push-2-of-12
+          section.page-section
+            h2 Contact Details
+            p
+              span.bold.black Phone
+              br
+              span 087-2760256
+            p
+              span.bold.black Email
+              br
+              span
+                a(href="mailto:info@phoenixroofing.com").link info@phoenixroofing.com
+            p
+              span.circle
+                a(href="http://www.facebook.com", target="_blank").link
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+              span.circle
+                a(href="http://www.twitter.com", target="_blank").link
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+
+    script(type="application/javascript", src="/js/form-submit.js")

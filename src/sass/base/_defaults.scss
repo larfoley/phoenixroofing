@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+  background: $background;
+  font-family: $font-stack;
+  font-size: $font-size;
+  color: $text-color;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $headings-color;
+  margin-top: 0;
+}
+
+p {
+  line-height: $line-height;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.browserupgrade, .noscript {
+  padding: 1em;
+  text-align: center;
+  background: #E74C3C;
+  color: white;
+  margin-bottom: 1em;
+}

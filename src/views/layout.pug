@@ -1,0 +1,9 @@
+doctype html
+html(lang='en')
+  include ./partials/_head.pug
+  body
+    include ./partials/_nav.pug
+    script(type='text/javascript').
+      document.body.className += " js";
+    block content
+  include ./partials/_footer.pug
