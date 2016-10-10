@@ -12,7 +12,7 @@ app.set('views', __dirname + '/views');
 // Home route
 app.get('/', function(req, res) {
 
-  res.render("index", {title: "Home",scripts: ["foo.js", "bar.js"]});
+  res.render("index", {title: "Home"});
 
 });
 
@@ -26,14 +26,14 @@ app.get('/about', function(req, res) {
 // Services route
 app.get('/services', function(req, res) {
 
-  res.render("services", {title: "Services"});
+  res.render("services",{title: "Services"});
 
 });
 
 // Contact route
 app.get('/contact', function(req, res) {
 
-  res.render("contact", {title: "Contact"});
+  res.render("contact", {title: "Contact", scripts: ["/js/form-submit.js"]});
 
 });
 
