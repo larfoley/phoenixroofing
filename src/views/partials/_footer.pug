@@ -3,4 +3,7 @@ footer.bg-black
     .page-section
       p &copy; 2016 Phoenixroofing
 
-  script(src="/js/toggle-nav.js")
+script(src="/js/toggle-nav.js")
+if scripts
+  each val in scripts
+    script(src=val)
