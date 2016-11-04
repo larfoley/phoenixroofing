@@ -1,0 +1,22 @@
+.ul {
+  padding-left: .5em;
+  margin-bottom: 2em;
+  li {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-bottom: .5em;
+  }
+}
+
+.ul--checked {
+  @extend .ul;
+  li {
+    list-style-type: none;
+    &:before {
+      @extend .fa;
+      @extend .fa-check;
+      margin-right: 10px;
+      color: $green;
+    }
+  }
+}
