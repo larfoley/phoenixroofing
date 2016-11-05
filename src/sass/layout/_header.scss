@@ -2,11 +2,11 @@
   background: url("/img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: 0 120%;
   background-attachment: fixed;
-
+  // height: 100%;
   .overlay {
-    padding: 6em;
-    background: rgba(25,25,25, 0.3);
+    padding: 5.5em 0;
+    background: rgba(52, 73, 94, 0.3);
   }
 }

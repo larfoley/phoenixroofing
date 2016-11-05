@@ -1,5 +1,6 @@
 .main-nav {
-  background: #2e2e2e;
+  background: rgba(0,0,33, 1);
+  background: #22303d;
   @extend .clearfix;
 
   &__logo, &__link {
@@ -10,7 +11,6 @@
   }
 
   &__toggle {
-
     @media #{$mq-medium} {
       display: none;
     }
@@ -23,22 +23,18 @@
   }
 
   &__list {
-
     @media #{$mq-medium} {
       float: right;
     }
   }
 
   &__item {
-
     @media #{$mq-medium} {
       float: left;
     }
 
     &:first-child a {
-      // padding-top: 1em;
-      // color: green
-      // margin-top: .5em
+      border-left: 1px solid lighten($primary-color, 0%);
     }
 
   }
@@ -46,17 +42,19 @@
   &__link {
     display: inline-block;
     color: white;
-    padding: 0 1em;
+    padding: 0 1.5em;
     // text-transform: uppercase;
-    color: #f5f5f5;
-    // font-weight: bold;
+    color: lighten($primary-color, 15%);
+    color: white;
     // font-size: .9em;
     // background: $primary-color;
     // border-radius: 5px;
     text-align: center;
-
+    // text-transform: uppercase;
+    border-right: 1px solid lighten($primary-color, 0%);
     &:hover {
-      background: $primary-color
+      background: $primary-color;
+      color: white;
     }
 
     @media #{$mq-medium} {

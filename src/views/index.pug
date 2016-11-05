@@ -8,58 +8,63 @@ block content
 
   main.landing
 
-    section.page-section.bg-wild-sand
-      .container.clearfix
-        h2.text-center Welcome
-        .grid__col--3-of-5.grid__col--centered
-          p.text-center.lead
-            | At Phoenix Roofing Ltd. we aim to provide the best soloution to all your roof, flat roof or guttering requirments
-
+    //- section.page-section
+    //-   .container.clearfix
+    //-     h2.text-center Welcome
+    //-     .grid__col--3-of-5.grid__col--centered
+    //-       p.text-center.lead
+    //-         | At Phoenix Roofing Ltd. we aim to provide the best soloution to all your roof, flat roof or guttering requirments
+    //-
     section.page-section
       .container
+        //- h2.text-center Services
+        //- hr.hr
         .grid
-          .grid__col.grid__col--1-of-2
-            img(src="/img/img-1.jpg", alt="Roofer").margin-bottom
-          .grid__col.grid__col--1-of-2
-            h3 Our Services include
-            ul.services-list
-              li
-                i.fa.fa-check.green(aria-hidden="true")
-                |  Private homes
-              li
-                i.fa.fa-check.green(aria-hidden="true")
-                |  Shopping centers
-              li
-                i.fa.fa-check.green(aria-hidden="true")
-                |  Factories
-              li
-                i.fa.fa-check.green(aria-hidden="true")
-                |  Large commercial buildings
-              li
-                i.fa.fa-check.green(aria-hidden="true")
-                |  New property development
+          .grid__col.grid__col--1-of-3.text-center
+            .card
+              h3 Flat Roofing
+              p All new Flat roof construction installed by Phoenix Roofing Dublin is covered by a 25 year guarantee.
+          .grid__col.grid__col--1-of-3.text-center
+            .card
+              h3 Domestic Roofing
+              p Our domestic roofing projects include: repairs, new roofs or renewals
+          .grid__col.grid__col--1-of-3.text-center
+            .card
+              h3 Commercial Roofing
+              p Phoenix Roofing can undertake large scale commercial and industrial projects, including repairs and replacements.
 
-    section.page-section.bg-black.color-white
+
+    section.page-section.bg-ebony-clay
+        .container
+          .grid
+            .grid__col.grid__col--1-of-2
+              img(src="/img/img-1.jpg", alt="Roofer").margin-bottom
+            .grid__col.grid__col--1-of-2
+              //- h3 Our Services include
+              ul.services-list.white
+                li
+                  i.fa.fa-check.green(aria-hidden="true")
+                  |  Private homes
+                li
+                  i.fa.fa-check.green(aria-hidden="true")
+                  |  Shopping centers
+                li
+                  i.fa.fa-check.green(aria-hidden="true")
+                  |  Factories
+                li
+                  i.fa.fa-check.green(aria-hidden="true")
+                  |  Large commercial buildings
+                li
+                  i.fa.fa-check.green(aria-hidden="true")
+                  |  New property development
+                p
+                  a.button__primary
+                    | Find out More
+
+
+    section.page-section.bg-white.gray
       .container
         .grid__col--3-of-4.grid__col--centered
-          p.text-center.white.lead We have a 24 hour service, no obligation free quotes, all insurance work undertaken, grant work undertaken.
+          p.text-center.lead We have a 24 hour service, no obligation free quotes, all insurance work undertaken, grant work undertaken.
           p.text-center
             a.button__primary(href="/contact") Get a Free Quote
-
-    section.page-section
-      .container
-        h2.text-center Services
-        hr.hr
-        .grid
-          .grid__col.grid__col--1-of-3.text-center
-            h3 Flat Roofing
-            p All new Flat roof construction installed by Phoenix Roofing Dublin is covered by a 25 year guarantee.
-          .grid__col.grid__col--1-of-3.text-center
-            h3 Domestic Roofing
-            p Our domestic roofing projects include: repairs, new roofs or renewals
-          .grid__col.grid__col--1-of-3.text-center
-            h3 Commercial Roofing
-            p Phoenix Roofing can undertake large scale commercial and industrial projects, including repairs and replacements.
-        p.text-center
-          a.button__primary
-            | Find out More
