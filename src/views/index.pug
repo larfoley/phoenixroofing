@@ -2,23 +2,29 @@ extends ./layout.pug
 block content
 
   header.page-header
-    div.overlay
-      h1.big-title.text-center.white Phoenix Roofing Dublin
-      p.text-center.white.lead For all Your Roofing Requirments
+    .overlay
+      .container
+        h1.big-title.white Phoenix Roofing Dublin
+        p.page-subtitle.white.lead For all Your Roofing Requirments
+        p
+          a(href="/contact").button__primary
+            | Get a Free Quote
 
   main.landing
-
-    //- section.page-section
-    //-   .container.clearfix
-    //-     h2.text-center Welcome
-    //-     .grid__col--3-of-5.grid__col--centered
-    //-       p.text-center.lead
-    //-         | At Phoenix Roofing Ltd. we aim to provide the best soloution to all your roof, flat roof or guttering requirments
-    //-
     section.page-section
       .container
-        //- h2.text-center Services
-        //- hr.hr
+        h2.text-center.uppercase Welcome to Phoenixroofing
+        .grid__col--3-of-5.grid__col--centered
+         p.text-center.lead
+           | At Phoenix Roofing Ltd. we aim to provide the best soloution to all your roof, flat roof or guttering requirments
+
+
+    section.page-section.bg-wild-sand
+      .container
+        //- h2.text-center Welcome to Phoenixroofing
+        //- .grid__col--3-of-5.grid__col--centered
+        //-  p.text-center.lead
+        //-    | At Phoenix Roofing Ltd. we aim to provide the best soloution to all your roof, flat roof or guttering requirments
         .grid
           .grid__col.grid__col--1-of-3.text-center
             .card
