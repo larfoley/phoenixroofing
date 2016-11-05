@@ -6,7 +6,7 @@
   &__logo, &__link {
     line-height: 3;
     @media #{$mq-medium} {
-      line-height: 4;
+      line-height: 5;
     }
   }
 
@@ -66,4 +66,57 @@
 
 .js .main-nav__list.isHidden {
   display: none;
+}
+
+.site-nav {
+  background: gold;
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+.site-nav__logo {
+  background: black;
+  display: block;
+  float: left;
+}
+
+.site-nav__toggle {
+  @extend .fa;
+  @extend .fa-bars;
+  float: right;
+  @media#{$mq-medium} {
+    display: none;
+  }
+}
+
+.site-nav__logo, .site-nav__toggle {
+  text-align: center;
+  @media#{$mq-medium} {
+    text-align: left;
+  }
+}
+
+.site-nav__logo, .site-nav__list {
+
+}
+
+
+
+.site-nav__list {
+  clear: both;
+  background: gray;
+  @media#{$mq-medium} {
+    float: none;
+  }
+
+}
+
+.site-nav__item {
+  text-align: center;
+  @media#{$mq-medium} {
+
+  }
 }
