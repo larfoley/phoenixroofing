@@ -1,0 +1,17 @@
+.contact-card {
+  border-bottom: 5px solid darken($primary-color, 10%);
+  padding: 1em;
+  margin-bottom: 1em;
+  background: $primary-color;
+  color: white;
+}
+
+.circle {
+  // background: black;
+  // padding: 1em;
+  font-size: 1.3em;
+  border: none;
+  background-color: darken($primary-color, 10%);
+
+  color: white;
+}
