@@ -917,10 +917,11 @@ nav a {
   border: 1px solid;
   display: inline-block;
   border-radius: 50%;
-  width: 35px;
+  width: 2em;
   text-align: center;
-  height: 35px;
-  line-height: 35px;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
   margin-right: .5em; }
 
 .hr {
@@ -930,10 +931,13 @@ nav a {
 
 .card {
   border-radius: 5px;
+  background: white;
+  min-height: 260px;
   padding: 2em;
   transition: .4s; }
   .card h3 {
-    margin: 0; }
+    margin: 0;
+    text-transform: uppercase; }
     .card h3:after {
       content: "";
       display: block;
@@ -979,7 +983,7 @@ nav a {
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.fa, .ul--checked li:before {
+.fa, .site-nav__toggle, .ul--checked li:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -1036,9 +1040,9 @@ nav a {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .ul--checked li.fa-pull-left:before {
+.fa.fa-pull-left, .fa-pull-left.site-nav__toggle, .ul--checked li.fa-pull-left:before {
   margin-right: .3em; }
-.fa.fa-pull-right, .ul--checked li.fa-pull-right:before {
+.fa.fa-pull-right, .fa-pull-right.site-nav__toggle, .ul--checked li.fa-pull-right:before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -1048,9 +1052,9 @@ nav a {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .ul--checked li.pull-left:before {
+.fa.pull-left, .pull-left.site-nav__toggle, .ul--checked li.pull-left:before {
   margin-right: .3em; }
-.fa.pull-right, .ul--checked li.pull-right:before {
+.fa.pull-right, .pull-right.site-nav__toggle, .ul--checked li.pull-right:before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -1689,7 +1693,8 @@ nav a {
 
 .fa-navicon:before,
 .fa-reorder:before,
-.fa-bars:before {
+.fa-bars:before,
+.site-nav__toggle:before {
   content: ""; }
 
 .fa-list-ul:before {
@@ -3160,7 +3165,7 @@ nav a {
     line-height: 3; }
     @media screen and (min-width: 700px) {
       .main-nav__logo, .main-nav__link {
-        line-height: 4; } }
+        line-height: 5; } }
   @media screen and (min-width: 700px) {
     .main-nav__toggle {
       display: none; } }
@@ -3191,43 +3196,80 @@ nav a {
 .js .main-nav__list.isHidden {
   display: none; }
 
+.site-nav {
+  background: gold; }
+  .site-nav:after {
+    content: "";
+    clear: both;
+    display: block; }
+
+.site-nav__logo {
+  background: black;
+  display: block;
+  float: left; }
+
+.site-nav__toggle {
+  float: right; }
+  @media screen and (min-width: 700px) {
+    .site-nav__toggle {
+      display: none; } }
+
+.site-nav__logo, .site-nav__toggle {
+  text-align: center; }
+  @media screen and (min-width: 700px) {
+    .site-nav__logo, .site-nav__toggle {
+      text-align: left; } }
+
+.site-nav__list {
+  clear: both;
+  background: gray; }
+  @media screen and (min-width: 700px) {
+    .site-nav__list {
+      float: none; } }
+
+.site-nav__item {
+  text-align: center; }
+
+.page-subtitle {
+  margin-top: 0; }
+
 .page-content, .page-content--centered {
   overflow: auto;
   background-color: white;
   padding: 3.5em 0; }
-  .page-content--centered {
-    max-width: 900px; }
+  .page-content > :first-child, .page-content--centered > :first-child {
+    margin-top: 0 !important; }
+  .page-content > :last-child, .page-content--centered > :last-child {
+    margin-bottom: 0 !important; }
+  @media screen and (min-width: 1000px) {
+    .page-content__nav, .page-content__main {
+      float: right; } }
+  .page-content__nav {
+    margin-bottom: 2em;
+    background: #f5f5f5;
+    padding: 1em; }
+    @media screen and (min-width: 1000px) {
+      .page-content__nav {
+        width: 30%;
+        margin-left: 3%; } }
+    .page-content__nav a {
+      background: white;
+      display: block;
+      color: black;
+      padding: 1em;
+      margin-bottom: 1em;
+      text-align: center; }
+      .page-content__nav a:hover {
+        background: #34495E;
+        color: white; }
+    .page-content__nav li:last-child a {
+      margin-bottom: 0; }
+  @media screen and (min-width: 1000px) {
+    .page-content__main {
+      width: 67%; } }
 
-.page-content > :first-child, .page-content--centered > :first-child {
-  margin-top: 0 !important; }
-
-.page-content > :last-child, .page-content--centered > :last-child {
-  margin-bottom: 0 !important; }
-
-.page-content__nav, .page-content__main {
-  float: right; }
-
-.page-content__nav {
-  margin-bottom: 2em;
-  width: 30%;
-  margin-left: 3%;
-  background: #f5f5f5;
-  padding: 1em; }
-  .page-content__nav a {
-    background: white;
-    display: block;
-    color: black;
-    padding: 1em;
-    margin-bottom: 1em;
-    text-align: center; }
-    .page-content__nav a:hover {
-      background: #34495E;
-      color: white; }
-  .page-content__nav li:last-child a {
-    margin-bottom: 0; }
-
-.page-content__main {
-  width: 67%; }
+.page-content--centered {
+  max-width: 900px; }
 
 .page-section {
   padding: 5em 0; }
@@ -3243,7 +3285,11 @@ nav a {
   background-attachment: fixed; }
   .page-header .overlay {
     padding: 5.5em 0;
-    background: rgba(52, 73, 94, 0.3); }
+    background: rgba(52, 73, 94, 0.5); }
+
+.site-footer {
+  background: #10161c;
+  padding: 1em; }
 
 .button, .button--large, .button--full, .button__primary {
   border: none;
@@ -3333,11 +3379,11 @@ nav a {
   .button__color-ebony-clay {
     color: #22303d; }
   .button__primary {
-    background: #34495E;
+    background: #3d566e;
     color: white;
-    border-color: #07090c; }
+    border-color: #19232d; }
     .button__primary:hover {
-      background-color: #22303d; }
+      background-color: #46637f; }
 
 .services-list {
   padding-left: 1em; }
@@ -3353,6 +3399,19 @@ nav a {
   background: #f5f5f5; }
 .contact-form textarea {
   height: 150px; }
+
+.contact-card {
+  border-bottom: 5px solid #22303d;
+  padding: 1em;
+  margin-bottom: 1em;
+  background: #34495E;
+  color: white; }
+
+.circle {
+  font-size: 1.3em;
+  border: none;
+  background-color: #22303d;
+  color: white; }
 
 .ul, .ul--checked {
   padding-left: .5em;
