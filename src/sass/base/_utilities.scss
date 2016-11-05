@@ -54,10 +54,11 @@
   border: 1px solid;
   display: inline-block;
   border-radius: 50%;
-  width: 35px;
+  width: 2em;
   text-align: center;
-  height: 35px;
-  line-height: 35px;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
   margin-right: .5em;
 }
 
@@ -71,12 +72,15 @@
   border-radius: 5px;
   // border: 3px solid #f5f5f5;
   // box-shadow: 2px 2px 1px 2px #f5f5f5;
+  background: white;
+  min-height: 260px;
   padding: 2em;
   transition: .4s;
   // color: white;
   // min-height: 255px;
   h3 {
     margin: 0;
+    text-transform: uppercase;
     &:after {
       @include hr($primary-color);
     }
