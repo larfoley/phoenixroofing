@@ -1,13 +1,16 @@
 (function() {
 
-  var navToggle = document.querySelector(".main-nav__toggle"),
-      nav = document.querySelector(".main-nav__list");
+  var siteNav = document.querySelector(".site-nav");
+  var toggleNav = siteNav.querySelector(".site-nav__toggle");
 
-  navToggle.onclick = toggleNav
-
-  function toggleNav() {
-    console.log(nav.className);
-    nav.classList.toggle("isHidden");
+  toggleNav.onclick = function() {
+    if (siteNav.classList.contains("isClosed")) {
+      siteNav.classList.remove('isClosed');
+      siteNav.classList.add('isOpen');
+    } else {
+      siteNav.classList.remove('isOpen');
+      siteNav.classList.add('isClosed');
+    }
   }
 
 }())
