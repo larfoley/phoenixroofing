@@ -1,17 +1,33 @@
 .contact-card {
-  border-bottom: 5px solid darken($primary-color, 10%);
+  // border: 5px solid darken($primary-color, 10%);
   padding: 1em;
   margin-bottom: 1em;
+  // background: $primary-color;
+  color: $text-color;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-card__link {
+  display: block;
+  border: 1px solid #f5f5f5;
+  padding: 1em;
+  color: gray;
+  text-decoration: none;
+}
+
+.contact-card__link:hover {
+  display: block;
+  border-color: $primary-color;
   background: $primary-color;
   color: white;
 }
 
 .circle {
-  // background: black;
+  background: black;
   // padding: 1em;
   font-size: 1.3em;
   border: none;
-  background-color: darken($primary-color, 10%);
-
   color: white;
+  // background-color: darken($primary-color, 10%);
 }
