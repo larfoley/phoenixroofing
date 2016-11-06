@@ -7,16 +7,43 @@ block content
     .container
       .page-content--centered
         p.lead.text-center Contact us now for a free qoute.
-        .contact-card
-          span.circle
-            i.fa.fa-phone
-          a(href="mailto:foo@foo.com").link 0874762647
-        .contact-card
-          span.circle
-            i.fa.fa-envelope-o
-          a info@phoenixroofing.com
-        span.circle l
-        span.circle t
-        span.circle f
-
-    script(type="application/javascript", src="/js/form-submit.js")
+        ul.contact-card
+          li.contact-card__item
+            a.contact-card__link(href="tel:01 455 2033", target="_blank")
+              span.circle
+                i.fa.fa-phone
+              span (01) - 455 2033
+          li.contact-card__item
+            a.contact-card__link(href="mailto:info@phoenixroofing.com", target="_blank")
+              span.circle
+                i.fa.fa-envelope-o
+              span info@phoenixroofing.com
+          li.contact-card__item
+            a.contact-card__link(href="http://facebook.com", target="_blank")
+              span.circle
+                i.fa.fa-facebook
+              span Facebook
+          li.contact-card__item
+            a.contact-card__link(href="http://twitter.com", target="_blank")
+              span.circle
+                i.fa.fa-facebook
+              span Twitter
+          //- //- span.circle
+          //- //-   i.fa.fa-phone
+          //- strong Phone:&nbsp;
+          //- a(href="mailto:foo@foo.com").link 0874762647
+          //- //- span.circle
+          //- //-   i.fa.fa-envelope-o
+          //- br
+          //- strong Email:&nbsp;
+          //- a info@phoenixroofing.com
+          //- br
+          //- strong Address:&nbsp;
+          //- span Killakee View, Cabra East, Dublin 24
+          //- p
+          //-   span.circle
+          //-     i.fa.fa-facebook
+          //-   span.circle
+          //-     i.fa.fa-twitter
+          //-   span.circle
+          //-     i.fa.fa-google-plus
