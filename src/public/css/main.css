@@ -828,6 +828,29 @@ textarea {
 .bg-ebony-clay--dark {
   background-color: black; }
 
+.fiord {
+  color: #3D566E; }
+
+.bg-fiord {
+  background-color: #3D566E; }
+
+.fiord--light {
+  color: #6789aa; }
+
+.bg-fiord--light {
+  background-color: #6789aa; }
+
+.fiord--dark {
+  color: #19232c; }
+
+.bg-fiord--dark {
+  background-color: #19232c; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 html {
   box-sizing: border-box;
   background: white;
@@ -971,6 +994,9 @@ nav a {
     .big-title {
       font-size: 3em; } }
 
+.hide {
+  display: none; }
+
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -983,7 +1009,7 @@ nav a {
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.fa, .site-nav__toggle, .ul--checked li:before {
+.fa, .ul--checked li:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -1040,9 +1066,9 @@ nav a {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.site-nav__toggle, .ul--checked li.fa-pull-left:before {
+.fa.fa-pull-left, .ul--checked li.fa-pull-left:before {
   margin-right: .3em; }
-.fa.fa-pull-right, .fa-pull-right.site-nav__toggle, .ul--checked li.fa-pull-right:before {
+.fa.fa-pull-right, .ul--checked li.fa-pull-right:before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -1052,9 +1078,9 @@ nav a {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.site-nav__toggle, .ul--checked li.pull-left:before {
+.fa.pull-left, .ul--checked li.pull-left:before {
   margin-right: .3em; }
-.fa.pull-right, .pull-right.site-nav__toggle, .ul--checked li.pull-right:before {
+.fa.pull-right, .ul--checked li.pull-right:before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -1693,8 +1719,7 @@ nav a {
 
 .fa-navicon:before,
 .fa-reorder:before,
-.fa-bars:before,
-.site-nav__toggle:before {
+.fa-bars:before {
   content: ""; }
 
 .fa-list-ul:before {
@@ -3159,7 +3184,6 @@ nav a {
   clip: auto; }
 
 .main-nav {
-  background: #000021;
   background: #22303d; }
   .main-nav__logo, .main-nav__link {
     line-height: 3; }
@@ -3179,57 +3203,101 @@ nav a {
   @media screen and (min-width: 700px) {
     .main-nav__item {
       float: left; } }
-  .main-nav__item:first-child a {
-    border-left: 1px solid #34495e; }
+  @media screen and (min-width: 700px) {
+    .main-nav__item:first-child a {
+      border-left: 1px solid #34495e; } }
   .main-nav__link {
-    display: inline-block;
+    display: block;
     color: white;
     padding: 0 1.5em;
     color: #4f6f8f;
     color: white;
-    text-align: center;
-    border-right: 1px solid #34495e; }
+    text-align: center; }
     .main-nav__link:hover {
       background: #34495E;
       color: white; }
+    @media screen and (min-width: 700px) {
+      .main-nav__link {
+        display: inline-block;
+        border-right: 1px solid #34495e; } }
 
 .js .main-nav__list.isHidden {
   display: none; }
 
 .site-nav {
-  background: gold; }
-  .site-nav:after {
-    content: "";
-    clear: both;
-    display: block; }
+  background: #22303d;
+  overflow: auto; }
 
-.site-nav__logo {
-  background: black;
-  display: block;
-  float: left; }
+.site-logo {
+  /*font-size: 60px;*/
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase; }
 
 .site-nav__toggle {
-  float: right; }
-  @media screen and (min-width: 700px) {
-    .site-nav__toggle {
-      display: none; } }
+  display: none; }
 
-.site-nav__logo, .site-nav__toggle {
-  text-align: center; }
-  @media screen and (min-width: 700px) {
-    .site-nav__logo, .site-nav__toggle {
-      text-align: left; } }
+.js .site-nav__toggle {
+  display: block;
+  float: right;
+  border: none;
+  background-color: inherit;
+  color: white;
+  font-size: 1.25em; }
 
+/* Links */
 .site-nav__list {
-  clear: both;
-  background: gray; }
-  @media screen and (min-width: 700px) {
-    .site-nav__list {
-      float: none; } }
+  clear: both; }
 
 .site-nav__item {
+  list-style: none; }
+
+.site-nav__link {
+  display: block;
+  color: white;
+  padding: 0 1.5em;
+  color: #4f6f8f;
+  color: white;
   text-align: center; }
 
+.site-nav__link:hover {
+  background: #34495E;
+  color: white; }
+
+/* MOBILE STATE */
+@media screen and (max-width: 700px) {
+  .site-nav {
+    padding: 1em 0; }
+
+  .site-nav__list {
+    margin-top: 2em; }
+
+  .site-nav__link {
+    padding: 1em 0;
+    border-bottom: 1px solid black;
+    background: #34495E; }
+
+  /* NAV STATE */
+  /* isClosed styles*/
+  .js .site-nav.isClosed .site-nav__list {
+    display: none; }
+
+  /* isOpen styles*/
+  .js .site-nav.isOpen .site-nav__list {
+    display: block; } }
+/* DESKTOP STATE */
+@media screen and (min-width: 700px) {
+  .site-logo, .site-nav__link {
+    line-height: 5; }
+
+  .js .site-nav__toggle {
+    display: none; }
+
+  .site-nav__list {
+    float: right; }
+
+  .site-nav__item {
+    display: inline-block; } }
 .page-subtitle {
   margin-top: 0; }
 
@@ -3269,7 +3337,7 @@ nav a {
       width: 67%; } }
 
 .page-content--centered {
-  max-width: 900px; }
+  width: 700px; }
 
 .page-section {
   padding: 5em 0; }
@@ -3378,6 +3446,13 @@ nav a {
       background-color: #10161c; }
   .button__color-ebony-clay {
     color: #22303d; }
+  .button__bg-color-fiord {
+    background-color: #3D566E;
+    border-color: #10161c; }
+    .button__bg-color-fiord:hover {
+      background-color: #2b3c4d; }
+  .button__color-fiord {
+    color: #3D566E; }
   .button__primary {
     background: #3d566e;
     color: white;
@@ -3401,16 +3476,29 @@ nav a {
   height: 150px; }
 
 .contact-card {
-  border-bottom: 5px solid #22303d;
   padding: 1em;
   margin-bottom: 1em;
+  color: #808080;
+  max-width: 600px;
+  margin: auto; }
+
+.contact-card__link {
+  display: block;
+  border: 1px solid #f5f5f5;
+  padding: 1em;
+  color: gray;
+  text-decoration: none; }
+
+.contact-card__link:hover {
+  display: block;
+  border-color: #34495E;
   background: #34495E;
   color: white; }
 
 .circle {
+  background: black;
   font-size: 1.3em;
   border: none;
-  background-color: #22303d;
   color: white; }
 
 .ul, .ul--checked {
