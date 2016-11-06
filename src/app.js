@@ -33,7 +33,7 @@ app.get('/services', function(req, res) {
 // Contact route
 app.get('/contact', function(req, res) {
 
-  res.render("contact", {title: "Contact", scripts: ["/js/form-submit.js"]});
+  res.render("contact", {title: "Contact"});
 
 });
 
