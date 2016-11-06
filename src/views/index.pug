@@ -1,10 +1,10 @@
 extends ./layout.pug
 block content
 
-  header.page-header
+  header.page-header.text-center
     .overlay
       .container
-        h1.big-title.white Phoenix Roofing Dublin
+        h1.big-title.white.uppercase Phoenix Roofing Dublin
         p.page-subtitle.white.lead For all Your Roofing Requirments
         p
           a(href="/contact").button__primary
@@ -13,13 +13,13 @@ block content
   main.landing
     section.page-section
       .container
-        h2.text-center.uppercase Welcome to Phoenixroofing
+        h2.hide Welcome to Phoenixroofing
         .grid__col--3-of-5.grid__col--centered
          p.text-center.lead
            | At Phoenix Roofing Ltd. we aim to provide the best soloution to all your roof, flat roof or guttering requirments
 
 
-    section.page-section.bg-wild-sand
+    section.page-section.bg-fiord
       .container
         //- h2.text-center Welcome to Phoenixroofing
         //- .grid__col--3-of-5.grid__col--centered
@@ -47,21 +47,16 @@ block content
               img(src="/img/img-1.jpg", alt="Roofer").margin-bottom
             .grid__col.grid__col--1-of-2
               //- h3 Our Services include
-              ul.services-list.white
+              ul.ul--checked.white
                 li
-                  i.fa.fa-check.green(aria-hidden="true")
                   |  Private homes
                 li
-                  i.fa.fa-check.green(aria-hidden="true")
                   |  Shopping centers
                 li
-                  i.fa.fa-check.green(aria-hidden="true")
                   |  Factories
                 li
-                  i.fa.fa-check.green(aria-hidden="true")
                   |  Large commercial buildings
                 li
-                  i.fa.fa-check.green(aria-hidden="true")
                   |  New property development
                 p
                   a.button__primary
