@@ -1,13 +1,27 @@
-nav.main-nav
+nav.site-nav.isClosed
   .container
-    i.main-nav__toggle.fa.fa-bars.fa-lg.white(aria-hidden="true")
-    a.main-nav__logo(href="/")  Phoenix Roofing
-    ul.main-nav__list()
-      li.main-nav__item
-        a.main-nav__link(href="/") Home
-      li.main-nav__item
-        a.main-nav__link(href="/about") About
-      li.main-nav__item
-        a.main-nav__link(href="/contact") Contact
-      li.main-nav__item
-        a.main-nav__link(href="/services") Services
+    a.site-logo(href='/') Phoenix Roofing
+    button.site-nav__toggle.fa.fa-bars(type='button', name='button')
+    ul.site-nav__list
+      li.site-nav__item
+        a.site-nav__link(href='/') Home
+      li.site-nav__item
+        a.site-nav__link(href='/about') About
+      li.site-nav__item
+        a.site-nav__link(href='/contact') Contact
+      li.site-nav__item
+        a.site-nav__link(href='/services') Services
+
+//- nav.main-nav
+//-   .container
+//-     a.main-nav__logo(href="/")  Phoenix Roofing
+//-     i.main-nav__toggle.fa.fa-bars.fa-lg.white(aria-hidden="true")
+//-     ul.main-nav__list()
+//-       li.main-nav__item
+//-         a.main-nav__link(href="/") Home
+//-       li.main-nav__item
+//-         a.main-nav__link(href="/about") About
+//-       li.main-nav__item
+//-         a.main-nav__link(href="/contact") Contact
+//-       li.main-nav__item
+//-         a.main-nav__link(href="/services") Services
