@@ -861,9 +861,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-html, body {
-  height: 100%; }
-
 h1,
 h2,
 h3,
@@ -3338,6 +3335,9 @@ nav a {
 
 .page-content--centered {
   width: 700px; }
+
+.page-wrapper {
+  padding: 3em 0; }
 
 .page-section {
   padding: 5em 0; }
