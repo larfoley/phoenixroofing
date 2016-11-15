@@ -1,8 +1,8 @@
 'use strict';
 
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 3001;
 
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'pug');
@@ -33,7 +33,7 @@ app.get('/services', function(req, res) {
 // Contact route
 app.get('/contact', function(req, res) {
 
-  res.render("contact", {title: "Contact"});
+  res.render("contact", {title: "Contact", scripts: ["/js/form-submit.js"]});
 
 });
 
