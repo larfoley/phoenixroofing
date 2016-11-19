@@ -11,6 +11,6 @@
       siteNav.classList.remove('isOpen');
       siteNav.classList.add('isClosed');
     }
-  }
+  };
 
-}())
+}());
