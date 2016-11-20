@@ -1,6 +1,12 @@
 extends ./layout.pug
 block content
 
+  div.loading-screen
+    div
+      p loading...
+      br
+      i.fa.fa-spinner.fa-2x.spin(aria-hidden="true")
+
   header.page-header.text-center
     .overlay
       .container
@@ -69,3 +75,7 @@ block content
           p.text-center.lead We have a 24 hour service, no obligation free quotes, all insurance work undertaken, grant work undertaken.
           p.text-center
             a.button__primary(href="/contact") Get a Free Quote
+
+
+
+  script(src="/js/loading-screen.js")
