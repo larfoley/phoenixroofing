@@ -1,0 +1,21 @@
+.js .loading-screen {
+  background: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.js .loading-screen div {
+  margin-top: 15em;
+  text-align: center;
+  // background: #ffdb4c;
+	position: relative;
+  color: white;
+}
+
+.js .loading-screen p {
+  font-size: 2em;
+  margin-bottom: .1em;
+  text-transform: uppercase;
+}
