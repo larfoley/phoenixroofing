@@ -3336,9 +3336,6 @@ nav a {
 .page-content--centered {
   width: 700px; }
 
-.page-wrapper {
-  padding: 3em 0; }
-
 .page-section {
   padding: 5em 0; }
 
@@ -3514,5 +3511,42 @@ nav a {
   .ul--checked li:before {
     margin-right: 10px;
     color: #2ECC71; }
+
+.js .loading-screen {
+  background: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0; }
+
+.js .loading-screen div {
+  margin-top: 15em;
+  text-align: center;
+  position: relative;
+  color: white; }
+
+.js .loading-screen p {
+  font-size: 2em;
+  margin-bottom: .1em;
+  text-transform: uppercase; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  20% {
+    transform: rotate(72deg); }
+  40% {
+    transform: rotate(144deg); }
+  60% {
+    transform: rotate(216deg); }
+  80% {
+    transform: rotate(288deg); }
+  100% {
+    transform: rotate(360deg); } }
+.spin {
+  animation-name: spin;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
 
 /*# sourceMappingURL=main.css.map */
