@@ -11,7 +11,7 @@ app.set('views', __dirname + '/views');
 
 // Home route
 app.get('/', function(req, res) {
-
+  const toggle-nav = require('toggle-nav');
   res.render("index", {title: "Home", scripts: ["/js/loading-screen.js"]});
 
 });
