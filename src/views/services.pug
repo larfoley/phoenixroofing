@@ -4,16 +4,17 @@ block content
     .overlay
       h1.big-title.text-center.white Services
   main.page-body
-    .page-content
-      nav.page-content__nav
-        ul
-          li
-            a(href="#flat-roofing") Flat Roofing
-          li
-            a(href="#domestic-roofing") Domestic Roofing
-          li
-            a(href="#commercial-roofing") Commerical Roofing
-      div.page-content__main
+    .page-content.grid.container
+      .grid__col.grid__col--1-of-4
+        nav.page-nav
+          ul.page-nav__list
+            li.page-nav__item
+              a.page-nav__link(href="#flat-roofing") Flat Roofing
+              li.page-nav__item
+                a.page-nav__link(href="#domestic-roofing") Domestic Roofing
+                li
+                  a.page-nav__link(href="#commercial-roofing") Commerical Roofing
+      .grid__col.grid__col--3-of-4
         h3#flat-roofing Flat Roofing
         p All new Flat roof construction installed by Phoenix Roofing Dublin is covered by a 25 year guarantee. We offer a free site survey at which our surveyor will discuss any problems including flat roof leaks and explain the work that is needed.
         p We use the highest quality materials to produce a monolithic laminated membrane that offers excellent weather proofing and dimensional stability.
