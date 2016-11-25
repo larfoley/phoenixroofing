@@ -1,40 +1,86 @@
 (function() {
 
-  var body = document.body;
-  var nav = document.querySelector('.site-nav');
+  // make navigation fixed before the nav leaves the viewport
 
-  body.onscroll = function() {
-    if (body.scrollTop > 160) {
-      !nav.classList.contains("fixed") ? nav.classList.add("fixed") : null;
-    } else {
-      nav.classList.remove("fixed");
+  var body = document.body,
+      sideNav = document.querySelector('.page-nav'),
+      sideNavOffset = new Number(sideNav.offsetTop),
+      sideNavLinks = sideNav.querySelector('a');
+
+  function scrollToEl(el, options) {
+
+    var id;
+
+
+    if (!options) {
+      options = {
+        speed: 10
+      };
     }
+
+    clearInterval(id);
+
+    id = setInterval(function() {
+
+      var scrollDirection = 1;
+
+      if (body.scrollTop > el.offsetTop) {
+        scrollDirection = 1;
+        body.scrollTop -= 10;
+        console.log("Scrolling up");
+      } else if(body.scrollTop < el.offsetTop) {
+        body.scrollTop += 10;
+        scrollDirection = 0;
+        console.log("Scrolling down");
+      }
+
+      if (body.scrollTop === el.offsetTop) {
+        console.log("Stop scrolling");
+        clearInterval(id);
+      }
+
+    }, options.speed);
   }
 
-}())
+  // Bind handlers
 
-function scrollToEl() {
-  var el = document.querySelector('#Syntax');
-  var bdy = document.body;
-  var id;
+  sideNav.onclick = function(e) {
 
-  console.log("body " + bdy.scrollTop + " " + "el " + el.offsetTop);
+    // e.preventDefault();
 
-  // var el = document.querySelector(el);
+    var href = e.target.href || false;
+    var id = "";
 
-  id = setInterval(function() {
+    if (href) {
 
-    if (bdy.scrollTop > el.offsetTop) {
-      console.log("clearing interval...");
-      clearInterval(id);
+      var parseHref = false;
+
+      for (var i = 0; i < href.length; i++) {
+        if (href[i] === "#") {
+          parseHref = true;
+        }
+        if (parseHref) {
+          id += href[i];
+        }
+      }
+
+      // scrollToEl(document.querySelector(id), {
+      //   speed: 1
+      // });
+
     }
-    
-    console.log("scrolling body...");
-    bdy.scrollTop += 1;
-    console.log(bdy.scrollTop);
+  };
 
-  }, 10)
+  window.addEventListener('scroll', function() {
 
-}
+    if (sideNavOffset < body.scrollTop) {
+      sideNav.style.position = "fixed";
+      sideNav.style.top = 0;
+    } else {
+      sideNav.style.position = "static";
+    }
 
-scrollToEl();
+  }, false);
+
+
+}());
