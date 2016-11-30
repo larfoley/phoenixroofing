@@ -36,6 +36,17 @@ app.get('/contact', function(req, res) {
 
 });
 
+app.use(function(req, res) {
+  res.render("404");
+});
+
+app.use(function(req, res) {
+  console.error(err.stack);
+  res.type('text/plain');
+  res.status(500);
+  res.send("500 - Server Error");
+});
+
 app.listen(port, function() {
   console.log("Serving at http://localhost:" + port);
 });
