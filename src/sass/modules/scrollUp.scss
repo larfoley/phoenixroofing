@@ -1,0 +1,24 @@
+.scrollUp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: .3s;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 2px darken(#3d566e, 15%);
+  background-color: #3d566e;
+  color: white;
+  padding: .5em;
+}
+
+.scrollUp:hover {
+  cursor: pointer;
+}
+
+.scrollUp.isVisible {
+  opacity: 1;
+}
